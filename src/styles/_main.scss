@@ -1,0 +1,226 @@
+@use "sass:math";
+
+body {
+	font-family: "Manrope", sans-serif;
+	background-color: rgb(255, 255, 255);
+}
+
+.wrapper {
+	color: #000000;
+	background-color: #a2bba230;
+	min-height: 100%;
+	overflow: clip;
+	display: flex;
+	flex-direction: column;
+
+	main {
+		flex-grow: 1;
+		padding: 20px;
+	}
+}
+
+[class*="__container"] {
+	max-width: 1200px;
+	margin-inline: auto;
+	padding-inline: 15px;
+}
+//==============================================
+.header {
+	padding-block: 30px;
+	background-color: #37a449;
+	color: #ffffff;
+	font-size: 20px;
+	font-weight: 600;
+	// .header__container
+	&__container {
+		display: flex;
+		gap: 30px;
+	}
+	&__link {
+		transition: all 0.3s;
+		&-active {
+			color: #fac412;
+			text-decoration: underline;
+			text-decoration-color: #fac412;
+			text-underline-offset: 8px;
+		}
+		&:hover {
+			color: #fac412;
+		}
+	}
+}
+
+//==============================================
+.footer {
+	padding-block: 30px 10px;
+	background-color: #727171;
+	text-align: center;
+	color: #ffffff;
+	// .footer__container
+	&__container {
+	}
+	// .footer__text
+	&__text {
+	}
+}
+
+//====================================================
+.about {
+	padding-block: 40px;
+
+	// .about__container
+
+	&__container {
+		display: flex;
+		flex-direction: column;
+		gap: 80px;
+	}
+
+	// .about__dev-title
+
+	&__dev-title {
+		color: #37a449;
+		font-size: 35px;
+		font-weight: 800;
+		border-radius: 10px;
+		background-color: #ffffff;
+		padding: 30px;
+		box-shadow:
+			-10px -10px 15px rgba(255, 255, 255, 0.5),
+			10px 10px 15px rgba(70, 70, 70, 0.12);
+	}
+	&__app-title {
+		color: #37a449;
+		font-size: 45px;
+		font-weight: 800;
+		border-radius: 10px;
+		background-color: #ffffff;
+		padding: 30px;
+		box-shadow:
+			-10px -10px 15px rgba(255, 255, 255, 0.5),
+			10px 10px 15px rgba(70, 70, 70, 0.12);
+	}
+	&__page404-title {
+		color: #37a449;
+		font-size: 45px;
+		font-weight: 800;
+		border-radius: 10px;
+		background-color: #ffffff;
+		padding: 30px;
+		box-shadow:
+			-10px -10px 15px rgba(255, 255, 255, 0.5),
+			10px 10px 15px rgba(70, 70, 70, 0.12);
+	}
+}
+//================================================
+.home {
+	padding-block: 40px;
+	// .home__container
+
+	&__container {
+		border-radius: 10px;
+		background-color: #ffffff;
+		padding: 30px;
+		display: flex;
+		flex-direction: column;
+		gap: 35px;
+		box-shadow:
+			-10px -10px 15px rgba(255, 255, 255, 0.5),
+			10px 10px 15px rgba(70, 70, 70, 0.12);
+	}
+
+	// .home__title
+
+	&__title {
+		color: #37a449;
+		font-size: 35px;
+		font-weight: 800;
+	}
+
+	// .home__text
+
+	&__text {
+	}
+
+	// .home__btns
+
+	&__btns {
+		display: flex;
+		gap: 20px;
+		justify-content: flex-end;
+	}
+}
+
+//================================================
+.btn {
+	text-align: center;
+	font-size: 18px;
+	padding: 15px 40px;
+	border-radius: 8px;
+	color: #ffffff;
+	transition: all 0.3s;
+	font-weight: 600;
+	&:disabled{
+		background-color: #727171;
+		pointer-events: none;
+	}
+	&-blue{
+			background-color: #2684d1;
+		&:hover {
+			background-color: #1668ac;
+		}
+	}
+
+	&__home {
+		align-self: flex-start;
+		border: 1px solid #37a449;
+		background-color: #37a449;
+		&:hover {
+			background-color: #2b7837;
+		}
+	}
+			&-red{
+				background-color: #ec1111;
+		&:hover {
+			background-color: #be0f0f;
+		}
+		}
+				&-grey{
+				background-color: #727171;
+		&:hover {
+			background-color: #545151;
+		}
+		}
+	&__main {
+		border: 1px solid #37a449;
+		background-color: #37a449;
+		&:hover {
+			background-color: #2b7837;
+		}
+
+	}
+	span{
+		display: inline-block;
+		min-width: 25px;
+	}
+}
+
+/* HTML: <div class="loader"></div> */
+.loader {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	width: 100px;
+	aspect-ratio: 1;
+	border-radius: 50%;
+	background:
+		radial-gradient(farthest-side, #ffa516 94%, #0000) top/8px 8px no-repeat,
+		conic-gradient(#0000 30%, #ffa516);
+	-webkit-mask: radial-gradient(farthest-side, #0000 calc(100% - 10px), #000 0);
+	animation: l13 1s infinite linear;
+}
+@keyframes l13 {
+	100% {
+		transform: rotate(1turn);
+	}
+}

@@ -1,0 +1,179 @@
+.teacher {
+	// .teacher__container
+
+	&__container {
+		display: flex;
+		flex-direction: column;
+		gap: 30px;
+	}
+
+	// .teacher__title
+
+	&__title {
+		color: #37a449;
+		font-size: 40px;
+		font-weight: 800;
+	}
+
+	// .teacher__btns
+
+	&__btns {
+		display: flex;
+		gap: 20px;
+		justify-content: flex-end;
+	}
+	&__wrapper {
+		display: flex;
+		flex-direction: column;
+		gap: 30px;
+	}
+	&__item {
+		display: flex;
+		flex-direction: column;
+		gap: 30px;
+	}
+}
+//==========================================================
+.card {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+	transition: all 0.3s;
+	border: 1px solid #cfceceb5;
+	border-radius: 10px;
+	background-color: #ffffff;
+	padding: 50px 30px;
+	box-shadow:
+		-10px -10px 15px rgba(255, 255, 255, 0.5),
+		10px 10px 15px rgba(70, 70, 70, 0.12);
+	&:hover {
+		border: 1px solid #37a449;
+	}
+	// .card__img
+
+	&__img {
+		width: 60px;
+		aspect-ratio: 1;
+		border-radius: 50%;
+		overflow: hidden;
+		border: 1px solid #37a449;
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	// .card__inner
+
+	&__inner {
+		flex-grow: 1;
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+	}
+
+	// .card__name
+
+	&__name {
+		color: #37a449;
+		font-weight: 800;
+		font-size: 20px;
+	}
+
+	// .card__subject
+
+	&__subject {
+		color: #4b4e4b;
+		font-weight: 800;
+		span {
+			font-weight: 400;
+		}
+	}
+
+	// .card__btn
+
+	&__btn {
+	}
+}
+//============================================================
+.meeting {
+	// .teacher__container
+
+	&__container {
+		border-radius: 10px;
+		background-color: #ffffff;
+		display: flex;
+		flex-direction: column;
+		gap: 30px;
+		padding: 30px;
+	}
+
+	// .teacher__title
+
+	&__title {
+		color: #37a449;
+		font-size: 40px;
+		font-weight: 800;
+	}
+
+	&__info {
+		padding: 20px;
+		background-color: #50c3c94b;
+		font-weight: 600;
+		color: #035157;
+	}
+}
+//===========================================================
+.form {
+	// .form__container
+
+	&__container {
+		border-radius: 10px;
+		background-color: #ffffff;
+		display: flex;
+		flex-direction: column;
+		gap: 30px;
+		padding: 30px;
+	}
+
+	// .form__title
+
+	&__title {
+		color: #37a449;
+		font-size: 40px;
+		font-weight: 800;
+	}
+
+	// .form__wrapper
+
+	&__wrapper {
+		display: flex;
+		flex-direction: column;
+		gap: 30px;
+	}
+
+	// .form__item
+
+	&__item {
+		display: flex;
+		flex-direction: column;
+		gap: 5px;
+		label {
+			color: #373837;
+		}
+		input {
+			background-color: #373837;
+			border-radius: 5px;
+			padding: 10px;
+			color: #ffffff;
+		}
+	}
+
+	// .form__btns
+
+	&__btns {
+		display: flex;
+		gap: 20px;
+	}
+}
